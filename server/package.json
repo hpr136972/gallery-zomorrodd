@@ -1,0 +1,11 @@
+{
+  "name": "gallery-zomorod-server",
+  "version": "0.2.0",
+  "private": true,
+  "description": "سرور و پنل مدیریت گالری زمرد (بدون وابستگی خارجی؛ Node 22+)",
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/index.js",
+    "test": "node --disable-warning=ExperimentalWarning --test \"test/*.test.js\""
+  }
+}

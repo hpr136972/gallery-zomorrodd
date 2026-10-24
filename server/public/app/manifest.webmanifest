@@ -1,0 +1,14 @@
+{
+  "name": "گالری زمرد",
+  "short_name": "گالری زمرد",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "/app/",
+  "scope": "/app/",
+  "display": "standalone",
+  "background_color": "#04201a",
+  "theme_color": "#04201a",
+  "icons": [
+    { "src": "/app/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

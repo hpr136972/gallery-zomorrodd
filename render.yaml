@@ -1,0 +1,22 @@
+# استقرار روی Render.com (Blueprint). مخزن GitHub را به Render وصل کنید و این فایل را بخواند.
+services:
+  - type: web
+    name: gallery-zomorod
+    runtime: node
+    plan: free            # توجه: در پلن رایگان، دیسک پایدار نیست و داده‌ها با هر راه‌اندازی دوباره پاک می‌شوند
+    buildCommand: "node -v"
+    startCommand: "node --disable-warning=ExperimentalWarning server/src/index.js"
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: PUBLIC_DEMO      # حالت نمایشی عمومی (برای مشتری واقعی و پول واقعی خاموش شود)
+        value: "1"
+      - key: TRUST_PROXY
+        value: "1"
+      - key: ADMIN_USER
+        value: admin
+      - key: ADMIN_PASSWORD   # در داشبورد Render مقدار بدهید (حداقل ۱۲ نویسه)
+        sync: false
+      - key: PEPPER           # در داشبورد Render مقدار تصادفی بلند بدهید
+        sync: false
